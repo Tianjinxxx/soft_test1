@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+    <script>
+        function demo(){
+
+            var  spanid = document.getElementById("spanid")
+
+            //获取输入框
+            var phid =  document.getElementById("phid");
+
+            //获取输入框中的内容
+            var p_value = phid.value; //13140008888
+
+            //定义手机号规则
+            var regExp = new RegExp("^1[356789]\\d{9}$");
+
+            //拿用户输入手机号和定义手机号规则比较
+            if(regExp.test(p_value)){
+                // alert("手机号正确");
+                // spanid.innerHTML="";
+                window.alert("手机号正确")
+            }else{
+                // alert("手机号不正确");
+                // spanid.innerHTML="手机号必须满足11位数字！";
+                window.alert("手机号不正确")
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form action="#" method="post" width="500" height="400">
+<!--        <div class="login-form">-->
+        电话号码<input type="text" name="phonenum" id="phid"/><span style="color: red;" id="spanid"></span>
+        <input type="button" value="->" onclick="demo()" /> </br>
+        客户名称<input type="text" name="name" id="name"></br>
+        登录密码<input type="password" name="password">
+        <input type="button" value="->" /> </br>
+        <input type="reset" value="输入验证"><input type="reset" value="重输"><input type="reset" value="退出"><br>
+        小组成员：6020202159 刘肃军
+                6020202163 项文杰
+                6020202158 罗昭斌
+
+<!--        </div>-->
+    </form>
+
+</body>
+
+</html>
